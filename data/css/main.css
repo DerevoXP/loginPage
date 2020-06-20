@@ -1,0 +1,14 @@
+input {
+  margin-bottom: 5px;
+  padding: 3px;
+  outline: none;
+}
+
+input:invalid {
+  border: 1px solid red;
+}
+
+input:invalid:focus {
+  background-color: gainsboro;
+}
+/*# sourceMappingURL=main.css.map */
