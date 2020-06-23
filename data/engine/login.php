@@ -17,6 +17,7 @@ $checkUser = $data->getUserData($login, $password);
 
 if (@$checkUser[0]['login'] == $login and @$checkUser[0]['pass'] == $password) {
         $_SESSION['user'] = $rawLogin;
+        $data->resetFlag($login);
         echo ("ok");
     } else {
         echo ("Логин или пароль введены неверно!");

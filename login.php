@@ -10,17 +10,22 @@
 
 <body>
 
-    <div class="menu">
-        <a href="login.php">Вход </a>/<a href="registration.php"> Регистрация </a>/<a href="remindpass.php"> Восстановление пароля</a><br /><br />
-    </div>
+    <div class="root">
 
-    <div class="inputs">
+        <div class="menu">
+            <a href="login.php">Вход </a>/
+            <a href="registration.php"> Регистрация </a>/
+            <a href="remindpass.php"> Восстановление пароля</a>
+        </div>
 
-        <input id="login" name="login" pattern="[A-ZА-ЯЁa-zа-яё0-9]{1,20}" placeholder="Введите логин" /> <br /><br />
-        <input id="password" type="password" pattern="[A-Za-z0-9@!#()*]{1,30}" placeholder="Введите пароль" /> <br /><br />
-        <button onclick="loginFunction()">SEND</button> <br /><br />
-        <p id="indicator"></p>
+        <div class="place">
 
+            <input id="login" name="login" pattern="[A-ZА-ЯЁa-zа-яё0-9]{1,20}" placeholder="Введите логин" />
+            <input id="password" type="password" pattern="[A-Za-z0-9@!#()*]{1,30}" placeholder="Введите пароль" />
+            <button onclick="loginFunction()">SEND</button>
+            <p id="indicator"></p>
+
+        </div>
     </div>
 
     <script src="/data/script/script.js"></script>

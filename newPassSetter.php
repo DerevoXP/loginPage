@@ -17,15 +17,18 @@ $repository->setFlag($key);
 
 <body>
 
-    <div class="inputs">
+    <div class="root">
 
-        <input id="password" type="password" pattern="[A-Za-z0-9@!#()*]{1,30}" placeholder="Новый пароль" /> <br /><br />
-        <input id="confirmPassword" type="password" pattern="[A-Za-z0-9@!#()*]{1,30}" placeholder="Повторите пароль" />
-        <p id="passMatch"></p><br /><br />
-        <input id="email" type="email" pattern="\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,6}" placeholder="Введите email"/> <br /><br />
-        <button onclick="resetPass()">SEND</button>
-        <p id="indicator"></p>
+        <div class="place">
 
+            <input id="password" type="password" pattern="[A-Za-z0-9@!#()*]{1,30}" placeholder="Новый пароль" />
+            <input id="confirmPassword" type="password" pattern="[A-Za-z0-9@!#()*]{1,30}" placeholder="Повторите пароль" />
+            <p id="passMatch"></p>
+            <input id="email" type="email" pattern="\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,6}" placeholder="Введите email" />
+            <button onclick="resetPass()">SEND</button>
+            <p id="indicator"></p>
+
+        </div>
     </div>
 
     <script src="/data/script/script.js"></script>

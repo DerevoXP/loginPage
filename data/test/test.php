@@ -32,7 +32,7 @@ $repository = new DbEngine();
 
 
 //////////// добавление в базу тестовых данных ////////////
-// $repository->setUser("admin", "12345", "testEmail", time());
+$repository->setUser("admin", "12345", "testEmail", time());
 
 
 //////////// проверка логина ////////////
@@ -57,10 +57,10 @@ $repository = new DbEngine();
 
 
 //////////// сброс пароля и обнуление флага ////////////
-$checkExistsEmail = $repository->getFlag("testEmail");
-if (isset($checkExistsEmail[0]['email'])) { 
-        $repository->resetPass("anotherPass", "testEmail");
-        echo ("ok");
-} else {
-    echo ("Этот пользователь не запрашивал смену пароля.");
-}
+// $checkExistsEmail = $repository->getFlag("testEmail");
+// if (isset($checkExistsEmail[0]['email'])) { 
+//         $repository->resetPass("anotherPass", "testEmail");
+//         echo ("ok");
+// } else {
+//     echo ("Этот пользователь не запрашивал смену пароля.");
+// }

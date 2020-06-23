@@ -13,9 +13,10 @@ if (isset($rawEmail)) {
     $email = hash("sha256", $rawEmail . $salt3);
     $checkExistsEmail = $repository->checkEmail($email);
 
-        if (isset($checkExistsEmail[0]['email'])) {
+        if (isset($checkExistsEmail[0]['pass'])) {
 
-            mail ( $rawEmail, "Восстановление доступа к derevoxp.ru" , "Для сброса пароля нажмите на эту ссылку: derevoxp.ru/newPassSetter.php?key=" . $checkExistsEmail[0]['email']);
+            // $repository->setFlag($email); // уставнавливаем флаг запроса смены пароля
+            mail ( $rawEmail, "Восстановление доступа к derevoxp.ru" , "Для сброса пароля нажмите на эту ссылку: derevoxp.ru/newPassSetter.php?key=" . $checkExistsEmail[0]['pass']);
             echo ("ok");
             
         } else {

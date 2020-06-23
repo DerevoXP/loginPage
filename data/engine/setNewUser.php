@@ -31,7 +31,7 @@ if (isset($rawLogin) and isset($rawPassword) and isset($rawEmail)) {
             $repository->setUser($login, $password, $email, time());
             echo 'ok';
         } else {
-            echo ("Такой логин уже зарегистрирован!");
+            echo ("Такой email уже зарегистрирован!");
         }
     } else {
         echo ("Пользователь с таким именем уже существует!");

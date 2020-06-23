@@ -75,15 +75,15 @@ class DbEngine
         return $result;
     }
 
-    public function setFlag($email)
+    public function setFlag($pass)
     {
         $connection =
             new PDO(DB_URL, USER, PWD);
         $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-        $sql = "UPDATE users SET reset = 'ok' WHERE email = :email";
+        $sql = "UPDATE users SET reset = 'ok' WHERE pass = :pass";
         $statement = $connection->prepare($sql);
-        $statement->bindParam(":email", $email);
+        $statement->bindParam(":pass", $pass);
         $statement->execute();
     }
 
@@ -99,6 +99,18 @@ class DbEngine
         $statement->execute();
         $result = $statement->fetchAll();
         return $result;
+    }
+
+    public function resetFlag($login)
+    {
+        $connection =
+            new PDO(DB_URL, USER, PWD);
+        $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+        $sql = "UPDATE users SET reset = NULL WHERE login = :login";
+        $statement = $connection->prepare($sql);
+        $statement->bindParam(":login", $login);
+        $statement->execute();
     }
 
 
