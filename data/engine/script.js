@@ -1,6 +1,6 @@
-function test() {
-    console.log('test - ok');
-}
+// function test() {
+//     console.log('test - ok');
+// }
 
 function submitToRegistrationFunction() {
 
